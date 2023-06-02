@@ -4,7 +4,7 @@ import warnings
 import requests
 
 from modules.logging_colors import logger
-
+os.environ["no_proxy"] = "localhost,127.0.0.1,::1"
 os.environ['GRADIO_ANALYTICS_ENABLED'] = 'False'
 os.environ['BITSANDBYTES_NOWELCOME'] = '1'
 warnings.filterwarnings('ignore', category=UserWarning, message='TypedStorage is deprecated')
